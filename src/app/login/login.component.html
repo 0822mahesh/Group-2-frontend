@@ -7,12 +7,12 @@
       <div class="offset-md-4 col-md-4">
         <h1 class="center-align">Please Login</h1><hr>
         
-        <form method="POST" autocomplete="off">
+        <form [formGroup]="form" (submit)="submit()" autocomplete="off">
           <fieldset class="form-group filed-space">
             <input
               type="text"
               class="form-control"
-              name="email"
+              formControlName="email"
               placeholder="Enter email"
               required
               autofocus
@@ -23,7 +23,7 @@
             <input
               type="password"
               class="form-control"
-              name="password"
+              formControlName="password"
               placeholder="Enter password"
               required
             />

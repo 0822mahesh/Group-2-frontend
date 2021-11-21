@@ -8,14 +8,18 @@
           <a class="navbar-brand" href="/">
           <img src="{{imageSrc}}" alt="{{imageAlt}}" style="width: 50px" />
           </a>
-          <li class="nav-item"><a href="/about" class="nav-link link-dark px-2 active" aria-current="page">About</a></li>
-          <li class="nav-item"><a href="/registration" class="nav-link link-dark px-2">Registration</a></li>
-          <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Donation</a></li>
+          <li routerLinkActive="active" class="nav-item"><a routerLink="/about" class="nav-link link-dark px-2 " >About</a></li>
+          <li routerLinkActive="active" class="nav-item"><a  routerLink="/registration"  class="nav-link link-dark px-2">Tournaments</a></li>
+          <li routerLinkActive="active" class="nav-item"><a routerLink="#" class="nav-link link-dark px-2">Donation</a></li>
           
         </ul>
-        <ul class="nav">
-          <li class="nav-item"><a href="/login" class="nav-link link-dark px-2">Login</a></li>
-          <li class="nav-item"><a href="/signup" class="nav-link link-dark px-2">Sign up</a></li>
+        <ul *ngIf = "!isLoggedIn()" class="nav">
+          <li routerLinkActive="active" class="nav-item"><a routerLink="/login" class="nav-link link-dark px-2">Login</a></li>
+          <li routerLinkActive="active" class="nav-item"><a routerLink="/signup" class="nav-link link-dark px-2">Sign up</a></li>
+        </ul>
+          <ul *ngIf = "isLoggedIn()" class="nav" >
+          <li routerLinkActive="active" class="nav-item"><a  routerLink="/profile"  class="nav-link link-dark px-2">Profile</a></li>
+          <li  class="nav-item"><button (click)= "doLogout()">Logout</button></li>
         </ul>
       </div>
     </nav>

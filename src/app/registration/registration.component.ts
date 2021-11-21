@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-registration',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
+ // form: FormGroup = new FormGroup;
+  //formBuilder: FormBuilder = new FormBuilder;
+  //formBuilder: any;
 
-  constructor() { }
+  constructor(
+   
+  ) { }
 
   ngOnInit(): void {
+    
   }
 
 }

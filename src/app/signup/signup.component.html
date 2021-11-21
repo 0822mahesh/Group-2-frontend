@@ -9,12 +9,12 @@
          
           <h1 class="center-align" >Please register for game</h1><hr>
 
-          <form method="POST" autocomplete="off">
+          <form [formGroup]="form" (submit)="submit()" autocomplete="off">
             <fieldset class="form-group filed-space">
               <input
                 type="text"
                 class="form-control"
-                name="firstname"
+                formControlName="firstName"
                 placeholder="Enter First Name"
                 required
                 autofocus
@@ -24,7 +24,7 @@
               <input
                 type="text"
                 class="form-control"
-                name="lastname"
+                formControlName="lastName"
                 placeholder="Enter Last Name "
                 required
                 autofocus
@@ -34,7 +34,7 @@
               <input
                 type="email"
                 class="form-control"
-                name="email"
+                formControlName="email"
                 placeholder="Enter Email"
                 required
                 autofocus
@@ -45,7 +45,7 @@
               <input
                 type="text"
                 class="form-control"
-                name="phonenumber"
+                formControlName="phoneNumber"
                 placeholder="Enter phone Number"
                 required
                 autofocus
@@ -55,22 +55,22 @@
               <input
                 type="password"
                 class="form-control"
-                name="password"
+                formControlName="password"
                 placeholder="Enter password"
                 required
               />
             </fieldset>
 
-            <fieldset class="form-group filed-space">
+           <!--  <fieldset class="form-group filed-space">
               <input
                 type="password"
                 class="form-control"
-                name="confrompassword"
+                formControlName="confromPassword"
                 placeholder="Conform password"
                 required
                 autofocus
               />
-            </fieldset>
+            </fieldset>-->
 
             
 
