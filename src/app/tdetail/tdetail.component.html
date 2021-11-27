@@ -1,0 +1,95 @@
+<app-dashboard></app-dashboard>
+<div class="container-fluid card center-align filed-space">
+  <div class="card-header">{{ tournament.name }} Tournament</div>
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ tournament.name }} tournament conducting by {{ tournament.hostName }}
+    </h5>
+    <p class="card-text">
+      tournament is will be conducted in {{ tournament.place }} on
+      {{ tournament.tdate }}.Please register before {{ tournament.rldate }}.
+    </p>
+    <button (click)="showRegistration()" class="btn btn-primary">
+      register
+    </button>
+  </div>
+</div>
+<ng-template [ngIf]="show">
+  <div class="row align-justify">
+    <div class="offset-md-4 col-md-4">
+      <h1 class="center-align">Please register for game</h1>
+      <hr />
+
+      <form [formGroup]="form" (submit)="psubmit()" autocomplete="off">
+        <fieldset class="form-group filed-space">
+          <input
+            type="text"
+            class="form-control"
+            name="tId"
+            placeholder="{{ tournament._id }}"
+            value="{{ tournament._id }}"
+            required
+            autofocus
+          />
+        </fieldset>
+        <fieldset class="form-group filed-space">
+          <input
+            type="text"
+            class="form-control"
+            name="playerFirstName"
+            placeholder="Enter First Name"
+            required
+            autofocus
+          />
+        </fieldset>
+        <fieldset class="form-group filed-space">
+          <input
+            type="text"
+            class="form-control"
+            name="playerLastName"
+            placeholder="Enter Last Name "
+            required
+            autofocus
+          />
+        </fieldset>
+        <fieldset class="form-group filed-space">
+          <input
+            type="text"
+            class="form-control"
+            name="playeremail"
+            placeholder="Enter Email"
+            required
+            autofocus
+          />
+        </fieldset>
+
+        <fieldset class="form-group filed-space">
+          <input
+            type="text"
+            class="form-control"
+            name="playerphoneNumber"
+            placeholder="Enter phone Number"
+            required
+            autofocus
+          />
+        </fieldset>
+
+        <fieldset class="form-group text-center form-register">
+          <input
+            type="submit"
+            class="btn btn-success filed-space"
+            value="register"
+          />
+
+          <a href="/">
+            <input
+              type="button"
+              class="btn btn-warning filed-space"
+              value="Cancel"
+            />
+          </a>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 120vh;
+  background: #222;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  font-size: 120%;
+  width: 100%;
+}
+header {
+  color: black;
+}
+
+.card {
+  background: wheat;
+  float: center;
+  color: white;
+  padding: 1em;
+  border-radius: 100px;
+  width: 100%;
+  max-width: 100%;
+  margin: 1em;
+  margin-right: 700px;
+}
+
+footer {
+  width: 90%;
+  height: 3%;
+  font-size: 13px;
+  padding: 0.5px;
+  background-color: black;
+  color: white;
+  font-family: Gabriola;
+}
+
+footer p {
+  height: 5%;
+  text-align: center;
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}

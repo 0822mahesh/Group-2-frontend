@@ -10,6 +10,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import {HttpClientModule} from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
+import { AboutComponent } from './about/about.component';
+import { TournamentsComponent } from './tournaments/tournaments.component';
+import { TdetailComponent } from './tdetail/tdetail.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     SignupComponent,
     RegistrationComponent,
-    ProfileComponent
+    ProfileComponent,
+    AboutComponent,
+    TournamentsComponent,
+    TdetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,41 +1,48 @@
-
 <app-dashboard></app-dashboard>
 
 <div class="container">
-   
-    <div class="row align-justify">
-      <div class="offset-md-4 col-md-4">
-        <h1 class="center-align">Please Login</h1><hr>
-        
-        <form [formGroup]="form" (submit)="submit()" autocomplete="off">
-          <fieldset class="form-group filed-space">
-            <input
-              type="text"
-              class="form-control"
-              formControlName="email"
-              placeholder="Enter email"
-              required
-              autofocus
-            />
-          </fieldset>
+  <div class="row align-justify">
+    <div class="offset-md-4 col-md-4">
+      <h1 class="center-align">Please Login</h1>
+      <hr />
 
-          <fieldset class="form-group filed-space">
-            <input
-              type="password"
-              class="form-control"
-              formControlName="password"
-              placeholder="Enter password"
-              required
-            />
-          </fieldset>
+      <form [formGroup]="form" (submit)="submit()" autocomplete="off">
+        <fieldset class="form-group filed-space">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="email"
+            placeholder="Enter email"
+            required
+            autofocus
+          />
+        </fieldset>
 
-          <fieldset class="form-group text-center">
-            <input type="submit" class="btn btn-success filed-space" value="Login" />
-            <a href="/">
-              <input type="button" class="btn btn-warning filed-space" value="Cancel" />
-            </a>
-          </fieldset>
-        </form>
-      </div>
+        <fieldset class="form-group filed-space">
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="Enter password"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="form-group text-center">
+          <input
+            type="submit"
+            class="btn btn-success filed-space"
+            value="Login"
+          />
+          <a href="/">
+            <input
+              type="button"
+              class="btn btn-warning filed-space"
+              value="Cancel"
+            />
+          </a>
+        </fieldset>
+      </form>
     </div>
-
+  </div>
+</div>
