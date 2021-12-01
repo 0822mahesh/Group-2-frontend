@@ -7,13 +7,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { RegistrationComponent } from './registration/registration.component';
-import {HttpClientModule} from '@angular/common/http'
-import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
 import { TournamentsComponent } from './tournaments/tournaments.component';
 import { TdetailComponent } from './tdetail/tdetail.component';
-
+import { DonationComponent } from './donation/donation.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,16 +26,18 @@ import { TdetailComponent } from './tdetail/tdetail.component';
     ProfileComponent,
     AboutComponent,
     TournamentsComponent,
-    TdetailComponent
+    TdetailComponent,
+    DonationComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

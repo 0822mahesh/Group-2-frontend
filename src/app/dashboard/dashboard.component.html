@@ -6,6 +6,9 @@
           <img src="{{ imageSrc }}" alt="{{ imageAlt }}" style="width: 50px" />
         </a>
         <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/home" class="nav-link link-dark px-2">Home</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
           <a routerLink="/about" class="nav-link link-dark px-2">About</a>
         </li>
         <li routerLinkActive="active" class="nav-item">
@@ -14,7 +17,7 @@
           >
         </li>
         <li routerLinkActive="active" class="nav-item">
-          <a routerLink="#" class="nav-link link-dark px-2">Donation</a>
+          <a routerLink="/donation" class="nav-link link-dark px-2">Donation</a>
         </li>
       </ul>
       <ul *ngIf="!isLoggedIn()" class="nav">

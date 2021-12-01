@@ -20,12 +20,16 @@
       <h1 class="center-align">Please register for game</h1>
       <hr />
 
-      <form [formGroup]="form" (submit)="psubmit()" autocomplete="off">
+      <form
+        #contactForm="ngForm"
+        (ngSubmit)="onSubmit(contactForm)"
+        autocomplete="off"
+      >
         <fieldset class="form-group filed-space">
           <input
             type="text"
             class="form-control"
-            name="tId"
+            name="tournament"
             placeholder="{{ tournament._id }}"
             value="{{ tournament._id }}"
             required
@@ -40,6 +44,7 @@
             placeholder="Enter First Name"
             required
             autofocus
+            ngModel
           />
         </fieldset>
         <fieldset class="form-group filed-space">
@@ -50,6 +55,7 @@
             placeholder="Enter Last Name "
             required
             autofocus
+            ngModel
           />
         </fieldset>
         <fieldset class="form-group filed-space">
@@ -60,6 +66,7 @@
             placeholder="Enter Email"
             required
             autofocus
+            ngModel
           />
         </fieldset>
 
@@ -71,6 +78,7 @@
             placeholder="Enter phone Number"
             required
             autofocus
+            ngModel
           />
         </fieldset>
 

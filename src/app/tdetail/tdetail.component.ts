@@ -12,14 +12,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class TdetailComponent implements OnInit {
   tournament: any;
   show: boolean = false;
+  // tId: String = "";
+  //   playerFirstName:String = "";
+  //   playerLastName:String="";
+  //   playeremail:String="";
+  //   playerphoneNumber:Number | undefined;
 
-  form: any = this.formBuilder.group({
-    tId: '',
-    playerFirstName: '',
-    playerLastName: '',
-    playeremail: '',
-    playerphoneNumber: '',
-  });
+  // form: any = this.formBuilder.group({
+
+  // });
 
   constructor(
     private actRoute: ActivatedRoute,
@@ -43,13 +44,27 @@ export class TdetailComponent implements OnInit {
   showRegistration() {
     this.show = !this.show;
   }
-  psubmit(): void {
-    console.log(this.form);
+  //   psubmit(): void {
+  //     console.log(this.form);
+  //     this.http
+  //       .post(
+  //         'http://127.0.0.1:5000/api/tournaments/player',
+  //         this.form.getRawValue()
+  //       )
+  //       .subscribe((res: any) => console.log(res));
+  //   }
+  onSubmit(contactForm: any) {
+    console.log(typeof contactForm);
+    console.log(contactForm);
+    console.log(this.tournament._id);
+    console.log(typeof this.tournament._id);
+
+    contactForm.value.tournament = this.tournament._id;
+    const a = JSON.stringify(contactForm.value);
+    console.log(a);
+    console.log(contactForm.value);
     this.http
-      .post(
-        'http://127.0.0.1:5000/api/tournaments/player',
-        this.form.getRawValue()
-      )
+      .post('http://127.0.0.1:5000/api/tournaments/player', contactForm.value)
       .subscribe((res: any) => console.log(res));
   }
 }
