@@ -1,0 +1,35 @@
+<app-dashboard></app-dashboard>
+
+<div class="container-fluid">
+  <h1>Tournaments List</h1>
+  <div id="container">
+    <button id="btn1">one</button>
+    <button id="btn2">two</button>
+    <button id="btn3">three</button>
+
+
+  </div>
+
+  <div class="main">
+
+    <!--cards -->
+
+    <div class="card" *ngFor="let t of tournments" >
+
+      <div class="image">
+        <img
+          [src]="t.imageUrl">
+      </div>
+      <div class="title">
+        <h1>
+          Tournament1</h1>
+      </div>
+      <div class="des">
+        <p> Desccription Here...</p>
+        <button>Read More...</button>
+      </div>
+    </div>
+  </div>
+
+
+</div>

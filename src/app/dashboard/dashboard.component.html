@@ -1,0 +1,40 @@
+<header>
+  <nav class="py-2 bg-light border-bottom">
+    <div class="container d-flex flex-wrap">
+      <ul class="nav me-auto">
+        <a class="navbar-brand" href="/">
+          <img src="{{ imageSrc }}" alt="{{ imageAlt }}" style="width: 50px" />
+        </a>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/home" class="nav-link link-dark px-2">Home</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/about" class="nav-link link-dark px-2">About</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/tournaments" class="nav-link link-dark px-2"
+            >Tournaments</a
+          >
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/donation" class="nav-link link-dark px-2">Donation</a>
+        </li>
+      </ul>
+      <ul *ngIf="!isLoggedIn()" class="nav">
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/login" class="nav-link link-dark px-2">Login</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/signup" class="nav-link link-dark px-2">Sign up</a>
+        </li>
+      </ul>
+      <ul *ngIf="isLoggedIn()" class="nav">
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/profile" class="nav-link link-dark px-2">Profile</a>
+        </li>
+        <li class="nav-item"><button (click)="doLogout()">Logout</button></li>
+      </ul>
+    </div>
+  </nav>
+  <header></header>
+</header>
