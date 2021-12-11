@@ -5,35 +5,42 @@
     <h1 class="center-align">Please register for game</h1>
     <hr />
 
-    <form [formGroup]="form" (submit)="submit()" autocomplete="off">
+    <form
+      #signupForm="ngForm"
+      (ngSubmit)="onSubmit(signupForm)"
+      autocomplete="off"
+    >
       <fieldset class="form-group filed-space">
         <input
           type="text"
           class="form-control"
-          formControlName="firstName"
+          name="firstName"
           placeholder="Enter First Name"
           required
           autofocus
+          ngModel
         />
       </fieldset>
       <fieldset class="form-group filed-space">
         <input
           type="text"
           class="form-control"
-          formControlName="lastName"
+          name="lastName"
           placeholder="Enter Last Name "
           required
           autofocus
+          ngModel
         />
       </fieldset>
       <fieldset class="form-group filed-space">
         <input
           type="email"
           class="form-control"
-          formControlName="email"
+          name="email"
           placeholder="Enter Email"
           required
           autofocus
+          ngModel
         />
       </fieldset>
 
@@ -41,19 +48,21 @@
         <input
           type="text"
           class="form-control"
-          formControlName="phoneNumber"
+          name="phoneNumber"
           placeholder="Enter phone Number"
           required
           autofocus
+          ngModel
         />
       </fieldset>
       <fieldset class="form-group filed-space">
         <input
           type="password"
           class="form-control"
-          formControlName="password"
+          name="password"
           placeholder="Enter password"
           required
+          ngModel
         />
       </fieldset>
 

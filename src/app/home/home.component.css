@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 120vh;
+  background: #222;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  font-size: 120%;
+  width: 100%;
+}

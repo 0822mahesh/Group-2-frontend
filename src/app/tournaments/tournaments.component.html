@@ -1,7 +1,8 @@
 <app-dashboard></app-dashboard>
 
 <div class="container-fluid">
-  <h1>Tournaments List</h1>
+  <h1 style="text-align: center">Tournaments List</h1>
+  <ng-template [ngIf]="c"><button>Add Tournament</button></ng-template>
 
   <div *ngFor="let e of li">
     <div class="card center-align filed-space">
@@ -14,7 +15,15 @@
           tournament is will be conducted in {{ e.place }} on
           {{ e.tdate }}.Please register before {{ e.rldate }}.
         </p>
-        <a href="/tournaments/{{ e._id }}" class="btn btn-primary">Edit</a>
+        <a href="/tournaments/{{ e._id }}" class="btn btn-primary filed-space"
+          >Detailed Info</a
+        >
+        <!-- <a
+          [ngIf]="c"
+          href="/tournaments/{{ e._id }}"
+          class="btn btn-danger filed-space"
+          >Delete</a>
+        >-->
       </div>
     </div>
   </div>

@@ -15,9 +15,6 @@ body {
   font-size: 120%;
   width: 100%;
 }
-header {
-  color: black;
-}
 
 .card {
   background: wheat;
@@ -27,26 +24,6 @@ header {
   border-radius: 100px;
   width: 100%;
   max-width: 100%;
-  margin: 1em;
+  margin: 36.5em;
   margin-right: 700px;
-}
-
-footer {
-  width: 90%;
-  height: 3%;
-  font-size: 13px;
-  padding: 0.5px;
-  background-color: black;
-  color: white;
-  font-family: Gabriola;
-}
-
-footer p {
-  height: 5%;
-  text-align: center;
-  display: block;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
 }

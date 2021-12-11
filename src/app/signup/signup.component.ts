@@ -9,28 +9,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  //form: FormGroup;
-  form = this.formBuilder.group({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    password: '',
-    confromPassword: '',
-  });
-
   constructor(
     private http: HttpClient,
     private formBuilder: FormBuilder,
-    private router: Router
-  ) //private form: FormGroup
-  {}
+    private router: Router //private form: FormGroup
+  ) {}
 
   ngOnInit(): void {}
-  submit(): void {
-    console.log(this.form.getRawValue());
+  onSubmit(signupForm: any) {
+    console.log(JSON.stringify(signupForm.value));
     this.http
-      .post('http://127.0.0.1:5000/api/users', this.form.getRawValue())
-      .subscribe(() => this.router.navigate(['/login']));
+      .post('http://127.0.0.1:8000/api/users', signupForm.value)
+      .subscribe((res: any) => {
+        console.log(res);
+        this.router.navigate(['/login']);
+      });
   }
 }

@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit {
       'my neader is ' + 'Bearer ' + localStorage.getItem('accessToken')
     );
     this.http
-      .delete(`http://127.0.0.1:5000/api/users/${this.currentUser._id}`, {
+      .delete(`http://127.0.0.1:8000/api/users/${this.currentUser._id}`, {
         headers,
       })
       .subscribe(() => {

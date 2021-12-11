@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
   submit(): void {
     this.http
-      .post('http://127.0.0.1:5000/api/users/login', this.form.getRawValue())
+      .post('http://127.0.0.1:8000/api/users/login', this.form.getRawValue())
       .subscribe(
         (res: any) => {
           console.log(res);

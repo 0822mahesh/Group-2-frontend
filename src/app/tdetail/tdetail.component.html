@@ -12,12 +12,16 @@
     <button (click)="showRegistration()" class="btn btn-primary">
       register
     </button>
+    <div *ngFor="let e of li">
+      {{ e.playerLastName }}
+    </div>
   </div>
 </div>
+
 <ng-template [ngIf]="show">
   <div class="row align-justify">
     <div class="offset-md-4 col-md-4">
-      <h1 class="center-align">Please register for game</h1>
+      <h4 class="center-align">Please register for game</h4>
       <hr />
 
       <form
@@ -25,17 +29,6 @@
         (ngSubmit)="onSubmit(contactForm)"
         autocomplete="off"
       >
-        <fieldset class="form-group filed-space">
-          <input
-            type="text"
-            class="form-control"
-            name="tournament"
-            placeholder="{{ tournament._id }}"
-            value="{{ tournament._id }}"
-            required
-            autofocus
-          />
-        </fieldset>
         <fieldset class="form-group filed-space">
           <input
             type="text"

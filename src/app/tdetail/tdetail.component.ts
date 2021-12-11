@@ -11,7 +11,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class TdetailComponent implements OnInit {
   tournament: any;
+  players: any;
   show: boolean = false;
+  li: any;
+  lis = [];
   // tId: String = "";
   //   playerFirstName:String = "";
   //   playerLastName:String="";
@@ -34,10 +37,17 @@ export class TdetailComponent implements OnInit {
       console.log(params);
 
       this.http
-        .get(`http://127.0.0.1:5000/api/tournaments/${params['t_id']}`)
+        .get(`http://127.0.0.1:8000/api/tournaments/${params['t_id']}`)
         .subscribe((res) => {
           this.tournament = res;
           console.log(res);
+        });
+      this.http
+        .get(`http://127.0.0.1:8000/api/tournaments/${params['t_id']}/players`)
+        .subscribe((resplayers) => {
+          this.li = resplayers;
+          //this.players=resplayers;
+          console.log(this.li);
         });
     });
   }
@@ -64,7 +74,7 @@ export class TdetailComponent implements OnInit {
     console.log(a);
     console.log(contactForm.value);
     this.http
-      .post('http://127.0.0.1:5000/api/tournaments/player', contactForm.value)
+      .post('http://127.0.0.1:8000/api/tournaments/player', contactForm.value)
       .subscribe((res: any) => console.log(res));
   }
 }
