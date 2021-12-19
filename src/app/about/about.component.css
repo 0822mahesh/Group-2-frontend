@@ -6,13 +6,13 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 120vh;
+  height: 80vh;
   background: #222;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   font-family: "Open Sans", sans-serif;
-  background-image: url("https://source.unsplash.com/1600x900/?landscape");
-  font-size: 120%;
+  background-image: url("../../assets/img/aboutperfectasblugr.JPG");
+  font-size: 100%;
   width: 100%;
 }
 
@@ -24,6 +24,6 @@ body {
   border-radius: 100px;
   width: 100%;
   max-width: 100%;
-  margin: 36.5em;
+  margin: 43.5em;
   margin-right: 700px;
 }

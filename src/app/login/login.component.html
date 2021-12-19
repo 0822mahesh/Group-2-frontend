@@ -1,49 +1,57 @@
 <app-dashboard></app-dashboard>
+<body>
+  <div class="container">
+    <div class="row align-justify">
+      <div class="offset-md-4 col-md-4">
+        <h1 class="center-align" style="color: white">Please Login</h1>
+        <hr />
 
-<div class="container">
-  <div class="row align-justify">
-    <div class="offset-md-4 col-md-4">
-      <h1 class="center-align">Please Login</h1>
-      <hr />
-
-      <form [formGroup]="form" (submit)="submit()" autocomplete="off">
-        <fieldset class="form-group filed-space">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="email"
-            placeholder="Enter email"
-            required
-            autofocus
-          />
-        </fieldset>
-
-        <fieldset class="form-group filed-space">
-          <input
-            type="password"
-            class="form-control"
-            formControlName="password"
-            placeholder="Enter password"
-            required
-          />
-        </fieldset>
-
-        <fieldset class="form-group text-center">
-          <input
-            type="submit"
-            class="btn btn-success filed-space"
-            value="Login"
-          />
-          <a href="/">
+        <form
+          [formGroup]="form"
+          (submit)="submit()"
+          autocomplete="off"
+          novalidate
+        >
+          <fieldset class="form-group filed-space">
             <input
-              type="button"
-              class="btn btn-warning filed-space"
-              value="Cancel"
+              id="email"
+              type="text"
+              class="form-control"
+              formControlName="email"
+              placeholder="Enter email"
+              required
+              autofocus
             />
-          </a>
-        </fieldset>
-        <p>{{ message }}</p>
-      </form>
+          </fieldset>
+
+          <fieldset class="form-group filed-space">
+            <input
+              type="password"
+              class="form-control"
+              formControlName="password"
+              placeholder="Enter password"
+              required
+            />
+          </fieldset>
+
+          <fieldset class="form-group text-center">
+            <input
+              type="submit"
+              class="btn btn-success filed-space"
+              value="Login"
+            />
+            <a href="/">
+              <input
+                type="button"
+                class="btn btn-warning filed-space"
+                value="Cancel"
+              />
+            </a>
+          </fieldset>
+
+          <p>{{ message }}</p>
+        </form>
+      </div>
     </div>
   </div>
-</div>
+</body>

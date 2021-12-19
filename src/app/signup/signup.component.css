@@ -1,13 +1,28 @@
-.form-register{
-    position: absolute;
-    right :50%;
-    
-
+.form-register {
+  position: absolute;
+  right: 50%;
 }
-.filed-space{
-    margin: 10px;
+.filed-space {
+  margin: 10px;
 }
-.center-align{
-    margin-left: auto;
-    margin-right:auto
+.center-align {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#signup {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 80vh;
+  background: #222;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("../../assets/img/challengeas_promo_alt.jpg");
+  font-size: 100%;
+  width: 100%;
 }

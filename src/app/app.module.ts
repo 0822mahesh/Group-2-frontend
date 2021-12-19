@@ -15,7 +15,10 @@ import { TournamentsComponent } from './tournaments/tournaments.component';
 import { TdetailComponent } from './tdetail/tdetail.component';
 import { DonationComponent } from './donation/donation.component';
 import { HomeComponent } from './home/home.component';
-
+import { AddTourneyComponent } from './components/add-tourney/add-tourney.component';
+import { TourneyDetailComponent } from './components/tourney-detail/tourney-detail.component';
+import { TourneysListComponent } from './components/tourneys-list/tourneys-list.component';
+import { FlashMessagesModule } from 'flash-messages-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +32,9 @@ import { HomeComponent } from './home/home.component';
     TdetailComponent,
     DonationComponent,
     HomeComponent,
+    AddTourneyComponent,
+    TourneyDetailComponent,
+    TourneysListComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +42,7 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    FlashMessagesModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

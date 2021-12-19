@@ -1,0 +1,63 @@
+<app-dashboard></app-dashboard>
+
+<div id="signup" class="container">
+  <div
+    class="
+      d-flex
+      justify-content-between
+      flex-wrap flex-md-nowrap
+      align-items-center
+      pt-3
+      pb-2
+      mb-3
+      border-bottom
+    "
+  >
+    <h2 class="h2">Tourneys List</h2>
+
+    <button routerLink="/add-tourney" type="button" class="btn btn-success">
+      Create Tournament
+    </button>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped" text-align:center>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Players</th>
+          <th scope="col">Winner</th>
+          <th class="text-center" scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tourney of Tourneys; let i = index">
+          <td>{{ tourney.name }}</td>
+          <td>{{ tourney.description }}</td>
+          <td>
+            {{ tourney.p1 }}, {{ tourney.p2 }}, {{ tourney.p3 }},
+            {{ tourney.p4 }}, {{ tourney.p5 }}, {{ tourney.p6 }},
+            {{ tourney.p7 }}, {{ tourney.p8 }}
+          </td>
+          <td>{{ tourney.winner }}</td>
+          <td class="text-center">
+            <button
+              class="btn btn-sm btn-primary"
+              routerLink="/edit-tourney/{{ tourney._id }}"
+            >
+              View/Edit
+            </button>
+            <button
+              class="btn btn-sm btn-danger"
+              (click)="delete(tourney._id, i)"
+              style="margin: 5px"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

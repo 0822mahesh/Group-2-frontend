@@ -1,62 +1,81 @@
 <app-dashboard></app-dashboard>
-
+<!--<ng-flash-message></ng-flash-message>-->
 <div class="row align-justify">
-        <div class="offset-md-4 col-md-4">
-         
-          <h1 class="center-align" >User Profile</h1><hr>
+  <div class="offset-md-4 col-md-4">
+    <h1 style="color: white" class="center-align">User Profile</h1>
+    <hr />
+    <div>
+      <form
+        autocomplete="off"
+        #updateForm="ngForm"
+        (ngSubmit)="onUpdate(updateForm)"
+      >
+        <fieldset class="form-group filed-space">
+          <input
+            type="text"
+            class="form-control"
+            name="firstName"
+            placeholder="First Name:   {{ currentUser.firstName }}"
+            value="{{ currentUser.firstName }}"
+            required
+            autofocus
+            ngModel
+          />
+        </fieldset>
+        <fieldset class="form-group filed-space">
+          <input
+            type="text"
+            class="form-control"
+            name="lastName"
+            placeholder="Last Name: {{ currentUser.lastName }} "
+            value="{{ currentUser.lastName }}"
+            required
+            autofocus
+            ngModel
+          />
+        </fieldset>
+        <fieldset class="form-group filed-space">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Email: {{ currentUser.email }}"
+            value="{{ currentUser.email }}"
+            required
+            autofocus
+            ngModel
+          />
+        </fieldset>
 
-          <form autocomplete="off">
-            <fieldset class="form-group filed-space">
-              <input
-                type="text"
-                class="form-control"
-                name="firstname"
-                placeholder="First Name:   {{currentUser.firstName}}"
-                required
-                autofocus
-              />
-            </fieldset>
-            <fieldset class="form-group filed-space">
-              <input
-                type="text"
-                class="form-control"
-                name="lastname"
-                placeholder="Last Name: {{currentUser.lastName}} "
-                required
-                autofocus
-              />
-            </fieldset>
-            <fieldset class="form-group filed-space">
-              <input
-                type="email"
-                class="form-control"
-                name="email"
-                placeholder="Email: {{currentUser.email}}"
-                required
-                autofocus
-              />
-            </fieldset>
+        <fieldset class="form-group filed-space">
+          <input
+            type="text"
+            class="form-control"
+            name="phoneNumber"
+            placeholder="phone Number:  {{ currentUser.phoneNumber }}"
+            required
+            autofocus
+            ngModel
+          />
+        </fieldset>
 
-            <fieldset class="form-group filed-space">
-              <input
-                type="text"
-                class="form-control"
-                name="phonenumber"
-                placeholder="phone Number:  {{currentUser.phoneNumber}}"
-                required
-                autofocus
-              />
-            </fieldset>
+        <fieldset class="form-group text-center">
+          <input
+            type="submit"
+            class="btn btn-success filed-space"
+            value="update"
+          />
 
-            
-
-            <fieldset class="form-group text-center form-register">
-              <input type="submit" class="btn btn-success filed-space" value="update" />
-
-              <a >
-                <input (click)="onDelete()" type="button" class="btn btn-danger filed-space" value="Delete" />
-              </a>
-            </fieldset>
-          </form>
-        </div>
-      </div>
+          <a>
+            <input
+              (click)="onDelete()"
+              type="button"
+              class="btn btn-danger filed-space"
+              value="Delete"
+            />
+          </a>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

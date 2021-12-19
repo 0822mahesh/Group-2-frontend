@@ -1,15 +1,22 @@
-body {
-  display: flex;
+td {
+  text-align: left;
+}
+
+th {
+  text-align: left;
+}
+#signup {
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
   height: 80vh;
-  background: #222;
+
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: "Open Sans", sans-serif;
-  background-image: url("https://wwwimage-us.pplusstatic.com/thumbnails/photos/w1920-q80/marquee/1038010/tc_sp_hero_landscape.jpg");
+
   font-size: 100%;
   width: 100%;
 }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 //import { error } from 'console';
 import { ShareReplayConfig } from 'rxjs/internal/operators/shareReplay';
@@ -17,8 +17,8 @@ import { LoginService } from '../login.service';
 export class LoginComponent implements OnInit {
   user: any;
   form = this.formBuilder.group({
-    email: '',
-    password: '',
+    email: [null, Validators.required],
+    password: [null, Validators.required],
   });
 
   message: String = '';
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem('user', a);
           this.message = 'Sussfully logged in ';
           //window.sessionStorage.setItem(res.accessToken,stringify(this.user))
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/home']);
         },
         (error) => {
           console.log(error.error);

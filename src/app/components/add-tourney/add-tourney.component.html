@@ -1,0 +1,70 @@
+<app-dashboard></app-dashboard>
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+    <form [formGroup]="tourneyForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Name</label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="description"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Player 1</label>
+        <input class="form-control" type="text" formControlName="p1" required />
+      </div>
+
+      <div class="form-group">
+        <label>Player 2</label>
+        <input class="form-control" type="text" formControlName="p2" required />
+      </div>
+
+      <div class="form-group">
+        <label>Player 3</label>
+        <input class="form-control" type="text" formControlName="p3" required />
+      </div>
+
+      <div class="form-group">
+        <label>Player 4</label>
+        <input class="form-control" type="text" formControlName="p4" required />
+      </div>
+
+      <div class="form-group">
+        <label>Player 5</label>
+        <input class="form-control" type="text" formControlName="p5" required />
+      </div>
+
+      <div class="form-group">
+        <label>Player 6</label>
+        <input class="form-control" type="text" formControlName="p6" required />
+      </div>
+      <div class="form-group">
+        <label>Player 7</label>
+        <input class="form-control" type="text" formControlName="p7" required />
+      </div>
+      <div class="form-group">
+        <label>Player 8</label>
+        <input class="form-control" type="text" formControlName="p8" required />
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary btn-block" type="submit">
+          Add Tourney
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

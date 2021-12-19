@@ -10,6 +10,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { SignupComponent } from './signup/signup.component';
 import { TdetailComponent } from './tdetail/tdetail.component';
 import { TournamentsComponent } from './tournaments/tournaments.component';
+import { TourneysListComponent } from './components/tourneys-list/tourneys-list.component';
+import { AddTourneyComponent } from './components/add-tourney/add-tourney.component';
+import { TourneyDetailComponent } from './components/tourney-detail/tourney-detail.component';
 
 const routes: Routes = [
   {
@@ -57,6 +60,9 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
+  { path: 'tourneys-list', component: TourneysListComponent },
+  { path: 'add-tourney', component: AddTourneyComponent },
+  { path: 'edit-tourney/:id', component: TourneyDetailComponent },
 ];
 
 @NgModule({

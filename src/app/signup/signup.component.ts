@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
   constructor(
+    private actRoute: ActivatedRoute,
     private http: HttpClient,
     private formBuilder: FormBuilder,
     private router: Router //private form: FormGroup
@@ -19,7 +20,7 @@ export class SignupComponent implements OnInit {
   onSubmit(signupForm: any) {
     console.log(JSON.stringify(signupForm.value));
     this.http
-      .post('http://127.0.0.1:8000/api/users', signupForm.value)
+      .post(`http://127.0.0.1:8000/api/users/`, signupForm.value)
       .subscribe((res: any) => {
         console.log(res);
         this.router.navigate(['/login']);

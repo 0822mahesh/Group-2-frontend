@@ -1,0 +1,184 @@
+<app-dashboard></app-dashboard>
+<div
+  style="background-color: rgb(237, 250, 165)"
+  class="row justify-content-center mt-3 fit"
+>
+  <div class="col-md-4">
+    <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+      <div class="form-group">
+        <label><h4>Tournament Name</h4></label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label><h4>Tournament Description</h4></label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="description"
+          required
+        />
+      </div>
+    </form>
+  </div>
+  <br />
+  <br />
+  <br />
+  <h2>Bracket</h2>
+  <table>
+    <tr>
+      <th>Round 1</th>
+      <th>Round 2</th>
+      <th>Final Round</th>
+      <th>Winner!</th>
+    </tr>
+    <tr>
+      <td>
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="p1" />
+          </div>
+        </form>
+
+        <strong>Versus</strong>
+
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="p2" />
+          </div>
+        </form>
+        <strong> ______________________</strong>
+      </td>
+      <td>
+        <br />
+        <br />
+
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="r1w1" />
+          </div>
+        </form>
+        <strong>Versus</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <br />
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="p3" />
+          </div>
+        </form>
+
+        <strong>Versus</strong>
+
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="p4" />
+          </div>
+        </form>
+        <strong> _______________________</strong>
+      </td>
+      <td>
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="r1w2" />
+          </div>
+        </form>
+        <br /><br /><br /><br /><br />
+      </td>
+      <td>
+        <br /><br /><br />
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="r2w1" />
+          </div>
+        </form>
+        <strong>Versus</strong>
+      </td>
+
+      <td>
+        <br /><br /><br /><br />
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="winner" />
+          </div>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="p5" />
+          </div>
+        </form>
+
+        <strong>Versus</strong>
+
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="p6" />
+          </div>
+        </form>
+        <strong> ______________________</strong>
+      </td>
+      <td>
+        <br />
+        <br />
+
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="r1w3" />
+          </div>
+        </form>
+        <strong>Versus</strong>
+      </td>
+      <td>
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="r2w2" />
+          </div>
+        </form>
+        <br /><br /><br /><br /><br />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="p7" />
+          </div>
+        </form>
+
+        <strong>Versus</strong>
+
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="p8" />
+          </div>
+        </form>
+      </td>
+      <td>
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <input class="form-control" type="text" formControlName="r1w4" />
+          </div>
+        </form>
+        <br /><br /><br /><br /><br />
+      </td>
+    </tr>
+  </table>
+  <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+    <div class="form-group">
+      <button class="btn btn-primary btn-block" type="submit">
+        Save Bracket!
+      </button>
+    </div>
+  </form>
+</div>
