@@ -42,4 +42,7 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.4.3"
   }
+  "engines": {
+    "node": "v16.13.0"
+  }
 }
